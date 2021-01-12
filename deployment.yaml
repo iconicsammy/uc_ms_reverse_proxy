@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
@@ -12,7 +12,7 @@ spec:
         service: reverseproxy
     spec:
       containers:
-      - image: YOUR_DOCKER_HUB/simple-reverse-proxy
+      - image: sammysium/ud_mc_reverse_proxy
         name: reverseproxy
         imagePullPolicy: Always          
         resources:
